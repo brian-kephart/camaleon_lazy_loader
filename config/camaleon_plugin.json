@@ -1,0 +1,14 @@
+{
+  "title": "Camaleon Lazy Loader",
+  "descr": "Adds a browser-native loading=\"lazy\" attribute to images and iframes.",
+  "key": "camaleon_lazy_loader",
+  "helpers": [
+    "Plugins::CamaleonLazyLoader::MainHelper"
+  ],
+  "hooks": {
+    "on_active": ["clear_front_cache"],
+    "on_inactive": ["clear_front_cache"],
+    "front_cache_writing_cache": ["camaleon_lazy_loader_front_cache_writing_cache"],
+    "front_after_load": ["camaleon_lazy_loader_front_after_load"]
+  }
+}
