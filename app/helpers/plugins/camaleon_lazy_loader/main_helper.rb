@@ -7,7 +7,7 @@ module Plugins::CamaleonLazyLoader::MainHelper
   end
 
   def apply_lazy_loading(html)
-    doc = Nokogiri::HTML::DocumentFragment.parse html
+    doc = Nokogiri::HTML.parse html
     nodes = doc.css "img, iframe"
     nodes.each { |node| node["loading"] ||= "lazy" }
     doc.to_html
