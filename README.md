@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/ruby-2.5%2B-red.svg)
-![Gem Version](https://img.shields.io/gem/v/camaleon_image_optimizer.svg?colorB=blue)
+![Gem Version](https://img.shields.io/gem/v/camaleon_lazy_loader.svg?colorB=blue)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
 [![Build Status](https://travis-ci.com/brian-kephart/camaleon_lazy_loader.svg?branch=master)](https://travis-ci.org/brian-kephart/camaleon_lazy_loader)
 
