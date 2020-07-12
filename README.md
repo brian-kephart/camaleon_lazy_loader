@@ -9,7 +9,7 @@ This plugin adds a `loading="lazy"` attribute to `<img>` and `<iframe>` tags ren
 - Existing loading attributes will not be overwritten, so you can still set individual tags to `loading="eager"` or `loading="auto"`
 
 ## How it works
-This plugin updates the body of the http response using the `front_after_load` hook provided by Camaleon, unless the page is cached with the Front Cache plugin.
+This plugin updates the body of the http response using the `front_after_load` hook provided by Camaleon, unless the page is cached with the Front Cache plugin. Nokogiri is used to add the `loading` attribute.
 
 ### If the Front Cache plugin is active
 - For pages that are not cached, this plugin works as described above.
@@ -33,9 +33,14 @@ And then execute:
 $ bundle
 ```
 
+## Limitations
+This gem uses Nokogiri, which in turn wraps underlying parsers. Some characters can be altered by these parsers when used in element attributes. Known cases include:
+- The AMP lightning bolt ⚡
+- Characters that are escaped in HTML, such as endash or ampersand
+
 ## Contributing
 - Fork the repo.
-- Make your changes and add tests as necessary.
+- Make your changes and add tests as necessary. (Run tests with `rails test`)
 - Run `standardrb` to lint your code.
 - Submit a pull request.
 
