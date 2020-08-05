@@ -9,6 +9,9 @@
     "on_active": ["clear_front_cache"],
     "on_inactive": ["clear_front_cache"],
     "front_cache_writing_cache": ["camaleon_lazy_loader_front_cache_writing_cache"],
-    "front_after_load": ["camaleon_lazy_loader_front_after_load"]
+    "front_after_load": ["camaleon_lazy_loader_front_after_load"],
+    "on_render_sitemap": ["camaleon_lazy_loader_skip_lazy_loader"],
+    "on_render_robots": ["camaleon_lazy_loader_skip_lazy_loader"],
+    "on_render_rss": ["camaleon_lazy_loader_skip_lazy_loader"]
   }
 }

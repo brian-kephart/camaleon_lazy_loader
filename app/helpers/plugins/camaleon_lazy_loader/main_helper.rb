@@ -14,12 +14,16 @@ module Plugins::CamaleonLazyLoader::MainHelper
   end
 
   def camaleon_lazy_loader_front_after_load
-    return if @_plugin_do_cache # Do not process when reading from cache.
+    return if @skip_lazy_loader || @_plugin_do_cache
     response.body = apply_lazy_loading response.body
   end
 
   def camaleon_lazy_loader_front_cache_writing_cache(args)
     args[:data] = apply_lazy_loading args[:data] # Save processed HTML to cache.
     response.body = apply_lazy_loading response.body
+  end
+
+  def camaleon_lazy_loader_skip_lazy_loader(_args)
+    @skip_lazy_loader = true
   end
 end
