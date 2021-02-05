@@ -1,3 +1,7 @@
+## 1.0.0
+
+Support Ruby 3.0
+
 ## 0.1.4
 
 Skip processing when rendering sitemap, robots, or RSS.
