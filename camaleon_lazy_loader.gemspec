@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Adds browser-native loading="lazy" attribute to images and iframes rendered by Camaleon CMS.'
   spec.license = "MIT"
   spec.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  spec.metadata = {"rubygems_mfa_required" => "true"}
 
   spec.required_ruby_version = ">= 2.6"
 
